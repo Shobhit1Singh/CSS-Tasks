@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #id1{
+        height: 250px;
+        width: 250px;
+    border: 10px red groove;
+    position: relative;
+    left: 120px;
+    top: 100px;
+    }
+    #id2{
+        height: 250px;
+        width: 250px;
+    border: 10px red groove;
+    position: relative;
+    left: 120px;
+    top: 100px;
+    }
+    #id3{
+        height: 250px;
+        width: 250px;
+    border: 10px red groove;
+    position: absolute;
+    left: 400px;
+    top: 125px;
+    }
+    #id4{
+        height: 250px;
+        width: 250px;
+    border: 10px red groove;
+    position: absolute;
+    left: 500px;
+    top: 400px;
+    }
+    #id5{
+        height: 250px;
+        width: 250px;
+    border: 10px red groove;
+    position: absolute;
+    left: 700px;
+    top: 100px;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <img src="images/bg.jpg"  id="id1" >
+    </div>
+    <div>
+        <img src="images/intro-pic.jpg" onmouseover="change()"  onmouseout="change2()" id="id2">
+    </div>
+    <div>
+        <img src="images/slide-1.jpg" onmouseover="change1()"  onmouseout="change2()" id="id3">
+    </div>
+    <div>
+        <img src="images/slide-2.jpg"  onmouseover="change11()"  onmouseout="change2()" id="id4">
+    </div>
+    <div>
+        <img src="images/slide-3.jpg" onmouseover="change111()"  onmouseout="change2()" id="id5">
+    </div>
+<Script>
+    function change(){
+        document.getElementById("id1").src="images/intro-pic.jpg" 
+    }
+    function change1(){
+        document.getElementById("id1").src="images/slide-1.jpg "
+    }
+    function change11(){
+        document.getElementById("id1").src="images/slide-2.jpg "
+    }
+    function change111(){
+        document.getElementById("id1").src="images/slide-3.jpg "
+    }
+   
+    function change2(){
+        document.getElementById("id1").src="images/bg.jpg"
+    }
+</Script>
+</body>
+</html>
