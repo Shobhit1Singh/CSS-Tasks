@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Item1:<input id="item1">
+    <button onclick="show()" id="btn1" style="background-color: lightskyblue;color: white;border-radius: 30%;">Add price</button>
+    <input id="price1" style="display: none;" >
+    <br>
+    Item2:<input id="item2">
+    <button onclick="show1()" id="btn2" style="background-color: lightskyblue;color: white;border-radius: 30%;">Add price</button>
+    <input id="price2" style="display: none;">
+    <br>
+    Item3:<input id="item3">
+    <button onclick="show2()" id="btn3" style="background-color: lightskyblue;color: white;border-radius: 30%;">Add price</button>
+    <input id="price3" style="display: none;">
+    <br>
+    <button onclick="show3()" id="list" style="background-color: red;color: white;border-radius: 30%;">Generate</button>
+    <div id="text" style="display: none;">
+        Item1: <div id="item1dis" style="display:inline;"></div> Price is: <div id="price1dis" style="display:inline;"></div>  <br>
+        Item2: <div id="item2dis" style="display:inline;"></div> Price is: <div id="price2dis" style="display:inline;"></div> <br>
+        Item3: <div id="item3dis" style="display:inline;"></div> Price is: <div id="price3dis" style="display:inline;"></div>  <br>
+    Total Price is: <div style="display:inline;" id="totalprice"></div>
+    </div>
+    <script>
+        function show(){
+            var a=document.getElementById("btn1").value
+document.getElementById("price1").style.display=a
+        }
+        function show1(){
+            var b=document.getElementById("btn2").value
+document.getElementById("price2").style.display=b
+       }
+        function show2(){
+            var c=document.getElementById("btn3").value
+document.getElementById("price3").style.display=c
+        }
+      function show3(){
+var p= document.getElementById("list").style.display
+document.getElementById("text").style.display=p    
+var a1=document.getElementById("item1").value
+document.getElementById("item1dis").innerText=a1
+var a2=document.getElementById("price1").value
+document.getElementById("price1dis").innerHTML=a2
+var b1=document.getElementById("item2").value
+document.getElementById("item2dis").innerText=b1
+var b2=document.getElementById("price2").value
+document.getElementById("price2dis").innerHTML=b2
+var c1=document.getElementById("item3").value
+document.getElementById("item3dis").innerText=c1
+var c2=document.getElementById("price3").value
+document.getElementById("price3dis").innerText=c2
+var t=parseInt(a2)+parseInt(b2)+parseInt(c2)
+document.getElementById("totalprice").innerText=t
+}
+    </script>
+</body>
+</html>

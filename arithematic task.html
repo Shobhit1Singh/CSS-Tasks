@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Enter Number: <input type="number" id="input56" /> select operator:
+    <select name="operator" id="operator1" onchange="select()">
+      <option value="selected">selected</option>
+      <option value="sum" id="add1">+</option>
+      <option value="difference" id="minus1">-</option>
+      <option value="product" onchange="multiply()">*</option>
+      <option value="division" onchange="divide()">/</option>
+    </select>
+    <div id="div23">
+      <img
+        src="plus.jpg"
+        style="display: none; height: 200px; width: 200px"
+        id="picture1"
+      />
+      <img
+        src="minus.png"
+        style="display: none; height: 200px; width: 200px"
+        id="picture2"
+      />
+      <img
+        src="cross.png"
+        style="display: none; height: 200px; width: 200px"
+        id="picture3"
+      />
+      <img
+        src="slash.png"
+        style="display: none; height: 200px; width: 200px"
+        id="picture4"
+      />
+    </div>
+    <script>
+
+       function select(){
+        
+         var c= document.getElementById("operator1").value;
+        var x=document.getElementById("input56").value;
+        console.log(x);
+         console.log(c);
+         
+         if(c=="sum"){
+            document.getElementById("div23").innerHTML="";
+            document.getElementById("picture1").style.display="inline";}
+      else if(c=="difference"){
+      document.getElementById("picture2").style.display="inline";}
+     else if(c=="product"){
+      document.getElementById("picture3").style.display="inline";}
+      else if(c=="division"){      document.getElementById("picture4").style.display="inline";
+      }}
+    </script>
+  </body>
+</html>
