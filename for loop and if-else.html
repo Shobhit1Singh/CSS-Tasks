@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        Enter any number: <input type="number" id="number1"><br>
+    <button onclick="showDiv()">Create</button>
+    <div id="new" style="height: 300px;width: 300px; background-color: black;display: none;"></div>
+    <!-- <div class="container" id="new"></div> -->
+    <script>
+function showDiv(){
+    var p=document.getElementById("number1").value
+
+    if(p%2==0){
+    document.getElementById("new").style.backgroundColor="red"
+    document.getElementById("new").style.display="block"
+}
+else{
+    document.getElementById("new").style.backgroundColor="yellow"
+    document.getElementById("new").style.display="block"
+    }
+    for(var i=1;i<=p;i++){
+        
+    }
+}
+    </script>
+</body>
+</html>
