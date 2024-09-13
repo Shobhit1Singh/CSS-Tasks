@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.scenary{
+   height: 100vh;
+   width: 100%;
+   background-image: url(../images/townWithRoad.jpg);
+   background-size: cover;
+   overflow: hidden;
+   background-position: 0px;
+   position: relative;
+   overflow-x: hidden;
+   animation: move 15s linear infinite;
+}
+
+@keyframes move{
+    100%{
+        background-position: 0px;
+    }
+    0%{
+        background-position: 3840px;
+    }
+}
+.vehicle{
+    
+    width: 300px;
+    left: 40%;
+    bottom: 100px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.car img{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+@keyframes car{
+    100%{
+        transform: translateY(-2px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-2px);
+    }
+}
+
+.wheel{
+    /* border: 3px solid red; */
+    left: 40%;
+    bottom: 125px;
+    width: 30px;
+    height: 30px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.wheel img{
+    width: 52px;
+    height: 52px;
+    animation: wheel 1.7ms linear infinite;
+}
+.back-wheel{
+    left: -112px;
+    position: absolute;
+}
+.front-wheel{
+    left: 69px;
+    position: absolute;
+}
+
+@keyframes wheel {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.audio-container {
+    display:none; /* Hide the audio control if not needed */
+}
