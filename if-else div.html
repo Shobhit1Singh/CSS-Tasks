@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   A: <input type="number" id="a" ><br>
+   B: <input type="number" id="b"><br>
+    <div style="height: 300px;width: 300px; background-color: black;" id="div"></div><br>
+<button onclick="newDiv()" >Create Div</button>
+    <script>
+function newDiv(){
+    var x=document.getElementById("a").value
+    
+    var y=document.getElementById("b").value
+    if(x>y){
+    document.getElementById("div").style.backgroundColor="red"
+}
+else if(x<y){
+    document.getElementById("div").style.backgroundColor="yellow"
+} 
+else if(x==y){
+    document.getElementById("div").style.backgroundColor="green"
+}
+    
+}
+    </script>
+</body>
+</html>
